@@ -32,15 +32,15 @@ namespace QuickSort
         public static void Quicksort(int[] elements, int left, int right)
         {
             int i = left, j = right;
-            int pivot = elements[(left + right) / 2];
+            int pivot = elements[(left + right) / 2]; //setze pivot in die mitte
             int tmp = 0;
 
             while (i <= j)
             {
-                while (elements[i] < pivot)
+                while (elements[i] < pivot) //suche ein Element auf der linken Seite, das nicht nach links gehört
                     i++;
 
-                while (elements[j]  > pivot)
+                while (elements[j]  > pivot) //suche ein Element auf der rechten Seite, das nicht nach rechts gehört
                     j--;
 
                 if (i <= j)
